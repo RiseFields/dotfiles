@@ -1,0 +1,133 @@
+/* @define-color bg rgba(203, 159, 114, 0.5); */
+/* @define-color border rgba(256, 256, 114, 0.5); */
+@define-color bg rgba(136, 155, 153, 0.5);
+@define-color border rgba(195, 70, 65, 0.6);
+/* @define-color border rgba(162, 29, 59, 0.6); */
+    /* col.active_border = rgba(c34641ee) rgba(889B99ee) 45deg */
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, CaskaydiaCoveNerdFont, Noto Sans Mono;
+    border: none;
+    border-radius: 0px;
+}
+
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.modules-left {
+    padding-left: 5px;
+}
+
+.modules-right {
+    padding-right: 5px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* -- Workspaces -- */
+
+
+#workspaces {
+    padding: 0px 10px;
+    margin: 3px 3px;
+    opacity: 1.0;
+    border-radius:20px;
+    border: 3px solid @border;
+    background-color: @bg;
+}
+
+#workspaces button {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 16px;
+    border: 1px;
+    color: #aaaaaa;
+    transition: all 0.1s ease-in-out;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 16px;
+}
+
+#workspaces button.active {
+    font-weight: 900;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    color: #f28771;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+#window {
+    margin: 0px 10px;
+}
+
+#tray, #disk, #hardware, #power-profiles-daemon, #bat, #pulseaudio-slider ,#pulseaudio, #customnetwork, #keyboard-state, #language, #clock {
+    padding: 0px 10px;
+    background-color: @bg;
+    margin: 3px;
+    border-radius: 20px;
+    border: 3px solid @border;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 70px;
+    border-radius: 15px;
+    background-color: black;
+}
+#pulseaudio-slider highlight {
+    min-height: 5px;
+    border-radius: 15px;
+    background-color: red;
+}
+
+#power-profiles-daemon {
+    padding: 0px 14px;
+}
+
+#cpu, #memory, #temperature {
+    margin: 0px 3px 0px 3px;
+}
+
+#battery.icon {
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+#battery.warning {
+    padding-bottom: 2px;
+    font-size: 20px;
+    color: #fcbc0c;
+}
+
+#battery.critical {
+    padding-bottom: 2px;
+    font-size: 20px;
+    color: rgba(195, 70, 65, 1);
+}
+
+

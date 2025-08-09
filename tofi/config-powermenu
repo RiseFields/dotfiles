@@ -1,0 +1,20 @@
+include=config
+
+### Text layout
+# prompt to display
+prompt-text = "Powermenu : "
+
+#placeholder input text
+placeholder-text = "Action"
+
+# maximum number of results to display
+# if 0, tofi will draw as many results as possible
+num-results = 0
+
+# Padding
+padding-left = 33%
+padding-top = 33%
+
+# Sort results by number of usages in run and drun modes.
+history = false
+

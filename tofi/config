@@ -1,0 +1,55 @@
+### Font settings
+# If a path is given, tofi will startup much quicker
+# but any character not in the font will fail to render
+# font = /usr/share/fonts/TTF/CaskaydiaMonoNerdFontMono-Regular.ttf
+font = CaskaydiaMono Nerd Font Mono
+font-size = 20
+
+### Text theming
+text-color = #4e4e5f
+
+### Text layout
+# prompt to display
+prompt-text = " : "
+
+# maximum number of results to display
+# if 0, tofi will draw as many results as possible
+num-results = 7
+
+### Window theming
+# Width and height of the window, can be pixels or a percentage
+width = 100%
+height = 100%
+
+# Window background color
+background-color = #1b1111d9
+#selection-color = #83A4E7
+selection-color = #c34641ee
+
+# Width of the border in pixels
+border-width = 0
+
+# Width of the border outlines in pixels
+outline-width = 0
+
+# Padding
+padding-left = 33%
+padding-top = 33%
+
+# Spacing between results
+result-spacing = 25
+
+### Behaviour
+# Hides the cursor (default false)
+hide-cursor=true
+
+# Sort results by number of usages in run and drun modes.
+history = true
+
+# Select the matching algorithm used
+# matching-algorithm=fuzzy
+# matching-algorithm = fuzzy
+fuzzy-match=true
+
+#Automatically accept a result if it is the only one remaining
+auto-accept-single = false

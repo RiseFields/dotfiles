@@ -1,0 +1,16 @@
+include=config
+
+### Text layout
+# prompt to display
+prompt-text = " : "
+
+#placeholder input text
+placeholder-text = "Applications"
+
+# maximum number of results to display
+# if 0, tofi will draw as many results as possible
+num-results = 7
+
+# Padding
+# padding-left = 50%
+# padding-top = 33%

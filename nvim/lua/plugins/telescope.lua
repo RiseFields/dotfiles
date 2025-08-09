@@ -1,0 +1,36 @@
+return {}
+-- return {
+-- 	"nvim-telescope/telescope.nvim",
+-- 	tag = "0.1.8",
+-- 	dependencies = { "nvim-lua/plenary.nvim" },
+-- 	config = function()
+--         local actions = require("telescope.actions")
+-- 		require("telescope").setup({
+-- 			defaults = {
+-- 				mappings = {
+-- 					i = {
+-- 						["<C-j>"] = actions.move_selection_next,
+-- 						["<C-k>"] = actions.move_selection_previous,
+-- 						["<C-U>"] = false,
+-- 						["<esc>"] = actions.close,
+-- 					},
+-- 				},
+-- 			},
+-- 		})
+-- 		local builtin = require("telescope.builtin")
+-- 		vim.keymap.set("n", "<leader>mf", builtin.find_files, { desc = "Find files using telescope" })
+-- 		vim.keymap.set("n", "<leader>ms", builtin.live_grep, { desc = "Search for a word using telescope" })
+-- 		vim.keymap.set("n", "<leader>mg", builtin.git_files, { desc = "Find git files using telescope" })
+-- 		vim.keymap.set("n", "<leader>mb", builtin.buffers, { desc = "Show buffers using telescope" })
+-- 		vim.keymap.set("n", "<leader>mk", builtin.keymaps, { desc = "Show keymaps using telescope" })
+-- 		vim.keymap.set("n", "<leader>mws", function()
+-- 			local word = vim.fn.expand("<cword>")
+-- 			builtin.grep_string({ search = word })
+-- 		end, { desc = "Search for word under cursor using telescope" })
+-- 		vim.keymap.set("n", "<leader>mWs", function()
+-- 			local word = vim.fn.expand("<cWORD>")
+-- 			builtin.grep_string({ search = word })
+-- 		end, { desc = "Search for WORD under cursor using telescope" })
+--         vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
+-- 	end,
+-- }

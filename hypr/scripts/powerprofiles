@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+CONFIG_FILE=(~/.config/tofi/config-powermenu)
+
+# Check whether a command exists
+function command_exists() {
+  command -v "$1" &> /dev/null 2>&1
+}
+
+if ! command_exists systemctl ; then
+    exit 1
+fi
+
+# default_menu_options defined as an associative array
+typeset -A menu
+
+# The default options with keys/commands
+
+menu=(
+  [ Cancel]=""
+  [ Performance]="powerprofilesctl set performance"
+  [ Balanced]="powerprofilesctl set balanced"
+  [ Power Saver]="powerprofilesctl set power-saver"
+)
+
+menu_nrows=${#menu[@]}
+
+launcher="tofi -c ${CONFIG_FILE}"
+selection="$(printf '%s\n' "${!menu[@]}" | sort | ${launcher} )"
+
+if [[ $? -eq 0 && ! -z ${selection} ]]; then
+    hyprctl dispatch exec ${menu[$selection]}
+fi
+    
