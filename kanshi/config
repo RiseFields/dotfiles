@@ -1,0 +1,71 @@
+output "Lenovo Group Limited 0x403A Unknown" {
+    mode 1920x1200@60.03Hz
+    position 0,0
+    scale 1
+    alias $INTERNAL
+}
+
+output "Lenovo Group Limited LEN T22i-10 V5PK1832" {
+    mode 1920x1080@60.00Hz
+    position -1920,0
+    scale 1
+    alias $KOT
+}
+
+output "HP Inc. HP Z24q G3 CN42142TGG" {
+    mode 2560x1440@89.95Hz
+    position 0,-1440
+    scale 1
+    alias $SOLAR_KANTOOR
+}
+
+output "Philips Consumer Electronics Company 65BDL3000Q 0x01010101" {
+    mode 1920x1080@60.00Hz
+    position -1920,0
+    scale 1
+    alias $ROOM
+}
+
+output "HP Inc. HP E24q G5 CNC2490YJ5" {
+    mode 2560x1440@74.97Hz
+    position -320,-1440
+    scale 1
+    alias $SOLAR_KANTOOR_2
+}
+
+output "Hewlett Packard HP Z27s CNK8011R5D" {
+    mode 2560x1440@59.95Hz
+    position -320,-1440
+    scale 1
+    alias $SOLAR_WP_1
+}
+
+profile kot {
+    output $INTERNAL enable
+    output $KOT enable
+    exec notify-send "Applied profile" "Profile Kot is enabled"
+}
+
+profile solar_kantoor {
+    output $INTERNAL enable
+    output $SOLAR_KANTOOR_2 enable
+    exec notify-send "Applied profile" "Profile Solar Kantoor is enabled"
+}
+
+profile solar_werkplaats {
+    output $INTERNAL enable
+    output $SOLAR_WP_1 enable
+    exec notify-send "Applied profile" "Profile Solar Werkplaats is enabled"
+}
+
+profile test {
+    output $ROOM enable
+    output $INTERNAL enable
+}
+
+profile laptop {
+    output $INTERNAL enable
+    exec notify-send "Applied profile" "Profile Laptop is enabled"
+}
+
+

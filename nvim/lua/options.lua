@@ -25,6 +25,9 @@ vim.opt.scrolloff = 10
 
 -- do not wrap lines, allow long lines to extend as far as the line goes
 vim.opt.wrap = true
+-- 󱞥   󱞩
+vim.opt.showbreak = "󱞩"
+
 
 -- While searching trough a file incrementally highlight matching characters as you type
 vim.opt.incsearch = true
@@ -56,5 +59,3 @@ vim.opt.undofile = true
 
 -- Set timeout for leaderkey
 vim.opt.timeout = false
-
-

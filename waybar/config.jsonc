@@ -201,6 +201,6 @@
         "return-type": "json",
         "format": "  {} Todos |",
         "on-click": "alacritty -e nvim ~/Documents/SolarTeam/Notes/TODO.md",
-        "interval": 1
+        "interval": 60
     }
 }
